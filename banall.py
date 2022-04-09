@@ -2,12 +2,8 @@ import os
 from pyrogram import Client
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from Config import bot as app
 
-app_id = int(os.environ.get("API_ID", 12345))
-app_key = os.environ.get('API_HASH')
-token = os.environ.get('BOT_TOKEN')
-
-app = Client("banall", app_id, app_key, bot_token=token)
 
 
 STARTED = 'Black Magic Begins...'
