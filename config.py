@@ -1,3 +1,8 @@
+from pyrogram import Client
+from pyrogram import filters
+import logging
+import os
+
 class Config:
     TOKEN=os.environ['BOT_TOKEN']
     APP_HASH=os.environ['API_HASH']
