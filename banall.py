@@ -1,5 +1,5 @@
 import os
-from pyrogram import filters
+from pyrogram import filters, idle
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from config import bot 
 
@@ -47,3 +47,4 @@ def start(_, msg: Message):
 
 
 bot.run()
+idle() 
