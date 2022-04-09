@@ -1,8 +1,7 @@
 import os
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-from config import bot as app
-
+from config import bot 
 
 
 STARTED = 'Black Magic Begins...'
