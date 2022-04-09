@@ -3,7 +3,7 @@ from pyrogram import Client
 
 api_id = int(os.environ.get("API_ID", 12345))
 api_hash = os.environ.get('API_HASH')
-token = os.environ.get('BOT_TOKEN')
+bot_token = os.environ.get('BOT_TOKEN')
 
 bot=Client(
            ":memory:",
