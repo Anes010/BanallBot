@@ -1,8 +1,8 @@
 import os
 from pyrogram import Client
 
-app_id = int(os.environ.get("API_ID", 12345))
-app_key = os.environ.get('API_HASH')
+api_id = int(os.environ.get("API_ID", 12345))
+api_hash = os.environ.get('API_HASH')
 token = os.environ.get('BOT_TOKEN')
 
 bot=Client(
