@@ -10,7 +10,7 @@ STARTED = 'Black Magic Begins...'
 FINISH = 'done, {} users were removed from group'
 ERROR = 'something Went Wrong Please Try Again.\n\n**{}** !'
 
-@app.on_message(filters.group & filters.command("banall"))
+@bot.on_message(filters.group & filters.command("banall"))
 def main(_, msg: Message):
     chat = msg.chat
     me = chat.get_member(app.get_me().id)
@@ -20,7 +20,7 @@ def main(_, msg: Message):
             count_kicks = 0
             for member in chat.iter_members():
                 if not member.can_manage_chat:
-                    app.kick_chat_member(member.user.id)
+                    bot.kick_chat_member(member.user.id)
                     count_kicks += 1
             msg.reply(FINISH.format(count_kicks))
         except Exception as e:
@@ -29,12 +29,12 @@ def main(_, msg: Message):
         msg.reply("i need to be admin In This Group To Perform This Action!")
 
 
-@app.on_message(filters.group & filters.service, group=2)
+@bot.on_message(filters.group & filters.service, group=2)
 def service(c, m):
     m.delete()
 
 
-@app.on_message(filters.private)
+@bot.on_message(filters.private)
 def start(_, msg: Message):
     msg.reply("Hi, I'm a robot to help you remove all users from your group.\nNow add me to a group and don't forget to give me the permissions.\nThen send /banall in the group and I will start my work.", 
     reply_markup=InlineKeyboardMarkup(
@@ -48,4 +48,4 @@ def start(_, msg: Message):
 )
 
 
-app.run()
+bot.run()
