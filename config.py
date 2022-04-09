@@ -1,4 +1,5 @@
 import os
+from pyrogram import Client
 
 app_id = int(os.environ.get("API_ID", 12345))
 app_key = os.environ.get('API_HASH')
