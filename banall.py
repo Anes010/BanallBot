@@ -1,5 +1,4 @@
 import os
-from pyrogram import Client
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from config import bot as app
