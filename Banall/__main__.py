@@ -21,7 +21,7 @@ def main(_, msg: Message):
         except Exception as e:
             msg.reply(ERROR.format(str(e)))
     else:
-        msg.reply("i need to be admin In This Group To Perform This Action!")
+        msg.reply("أحتاج إلى أن أكون مسؤولا في هذه المجموعة لتنفيذ هذا الإجراء!")
 
 
 @bot.on_message(filters.group & filters.service, group=2)
@@ -31,12 +31,12 @@ def service(c, m):
 
 @bot.on_message(filters.private)
 def start(_, msg: Message):
-    msg.reply("Hi, I'm a robot to help you remove all users from your group.\nNow add me to a group and don't forget to give me the permissions.\nThen send /banall in the group and I will start my work.", 
+    msg.reply("مرحبا ، أنا روبوت لمساعدتك في إزالة جميع المستخدمين من مجموعتك.\nالآن أضفني إلى مجموعة ولا تنس أن تعطيني الصلاحيات.\nبعدها ارسل /banall في الكروب و سوف ابدء بعملي.", 
     reply_markup=InlineKeyboardMarkup(
                                       [
                                         [
-                                           InlineKeyboardButton("Source", url="https://www.github.com/TheDeCode/BanAllBot"), 
-                                           InlineKeyboardButton("Support", url="https://t.me/TheeDeCode")                                      
+                                           InlineKeyboardButton("قناه البوت", url="https://t.me/S8Y8S"), 
+                                           InlineKeyboardButton("قناه التحديثات", url="https://t.me/N_B_10")                                      
                                         ]
                                       ]
                                      )
